@@ -1,6 +1,7 @@
 package com.valance.oechappfinal
 
 import android.app.Application
+import com.valance.oechappfinal.databinding.ActivityMainBinding
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
@@ -21,4 +22,5 @@ class MyApp: Application() {
             }
         }
     }
+
 }

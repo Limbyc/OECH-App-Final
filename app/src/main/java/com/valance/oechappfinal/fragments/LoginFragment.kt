@@ -5,29 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.valance.oechappfinal.R
-import com.valance.oechappfinal.databinding.RegistrationFragmentBinding
+import com.valance.oechappfinal.databinding.LogInFragmentBinding
 
-class RegistrationFragment : Fragment() {
+class LoginFragment: Fragment() {
 
-    private lateinit var binding: RegistrationFragmentBinding
+    private lateinit var binding: LogInFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = RegistrationFragmentBinding.inflate(inflater, container,false)
+        binding = LogInFragmentBinding.inflate(inflater,container,false)
         return  binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.SignIn.setOnClickListener{
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.my_nav_host_fragment, LoginFragment())
-                .commit()
-        }
     }
 }

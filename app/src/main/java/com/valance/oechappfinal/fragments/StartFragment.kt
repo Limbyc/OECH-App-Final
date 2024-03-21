@@ -116,5 +116,12 @@ class StartFragment: Fragment() {
                 .replace(R.id.my_nav_host_fragment, RegistrationFragment())
                 .commit()
         }
+        binding.SignIn.setOnClickListener{
+            binding.SignIn.setOnClickListener{
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.my_nav_host_fragment, LoginFragment())
+                    .commit()
+            }
+        }
     }
 }
