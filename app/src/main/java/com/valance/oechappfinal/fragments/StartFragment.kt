@@ -14,7 +14,7 @@ class StartFragment: Fragment() {
     private val queue1 = mutableListOf<String>()
     private val queue2 = mutableListOf<String>()
     private val imageQueue = LinkedList<Int>()
-
+    private var buttonNextClickedCount = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -56,6 +56,9 @@ class StartFragment: Fragment() {
         binding.buttonNext.setOnClickListener {
             if (queue1.isNotEmpty()) {
                 queue1.removeAt(0)
+                if (queue1.isEmpty()) {
+                    buttonNextClickedCount++
+                }
                 if (queue1.isNotEmpty()) {
                     binding.textOchared.text = queue1.first()
                 }
@@ -63,18 +66,33 @@ class StartFragment: Fragment() {
 
             if (queue2.isNotEmpty()) {
                 queue2.removeAt(0)
+                if (queue2.isEmpty()) {
+                    buttonNextClickedCount++
+                }
                 if (queue2.isNotEmpty()) {
                     binding.textOcharedNear.text = queue2.first()
+                    buttonNextClickedCount++
                 }
             }
+
             if (imageQueue.isNotEmpty()) {
                 imageQueue.poll()
                 if (imageQueue.isNotEmpty()) {
-                    imageQueue.peek()
-                        ?.let { it1 -> binding.appCompatImageView.setImageResource(it1) }
+                    imageQueue.peek()?.let { it1 -> binding.appCompatImageView.setImageResource(it1) }
                 }
             }
+
+            if (buttonNextClickedCount % 2 == 0) {
+                binding.buttonNext.visibility = View.GONE
+                binding.buttonSkip.visibility = View.GONE
+                binding.buttonRegistration.visibility = View.VISIBLE
+                binding.textSignUp.visibility = View.VISIBLE
+                binding.SignIn.visibility = View.VISIBLE
+
+                buttonNextClickedCount = 0
+            }
         }
+
 
         binding.buttonSkip.setOnClickListener{
             if (imageQueue.isNotEmpty()) {
@@ -84,8 +102,19 @@ class StartFragment: Fragment() {
                 imageQueue.peek()?.let { it1 -> binding.appCompatImageView.setImageResource(it1) }
                 binding.buttonNext.visibility = View.GONE
                 binding.buttonSkip.visibility = View.GONE
+
+                binding.buttonRegistration.visibility = View.VISIBLE
+                binding.textSignUp.visibility = View.VISIBLE
+                binding.SignIn.visibility = View.VISIBLE
+
             }
 
+        }
+
+        binding.buttonRegistration.setOnClickListener{
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.my_nav_host_fragment, RegistrationFragment())
+                .commit()
         }
     }
 }

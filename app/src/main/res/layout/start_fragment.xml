@@ -85,7 +85,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:visibility="gone"
         android:id="@+id/buttonRegistration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -95,6 +94,7 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         android:paddingTop="15dp"
+        android:visibility="gone"
         android:paddingBottom="15dp"
         android:layout_marginTop="120dp"
         android:background="@drawable/button_next"
@@ -113,7 +113,22 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUp" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistration" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textColor="#0560FA"
+        android:textSize="14sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintStart_toEndOf="@+id/text_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistration" />
+
 
 
 
