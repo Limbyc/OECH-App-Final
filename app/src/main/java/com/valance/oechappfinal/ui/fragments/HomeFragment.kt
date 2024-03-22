@@ -1,23 +1,23 @@
-package com.valance.oechappfinal.fragments
+package com.valance.oechappfinal.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.valance.oechappfinal.databinding.LogInFragmentBinding
+import com.valance.oechappfinal.databinding.HomeFragmentBinding
 
-class LoginFragment: Fragment() {
+class HomeFragment: Fragment() {
 
-    private lateinit var binding: LogInFragmentBinding
+    private lateinit var binding: HomeFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = LogInFragmentBinding.inflate(inflater,container,false)
-        return  binding.root
+    ): View {
+        binding = HomeFragmentBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

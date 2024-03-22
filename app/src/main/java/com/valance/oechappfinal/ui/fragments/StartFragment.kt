@@ -1,4 +1,4 @@
-package com.valance.oechappfinal.fragments
+package com.valance.oechappfinal.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

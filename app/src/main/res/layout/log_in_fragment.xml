@@ -49,6 +49,7 @@
         android:fontFamily="@font/roboto_medium"
         android:hint="***********@mail.com"
         android:paddingStart="10dp"
+        android:maxLines="1"
         android:paddingTop="14dp"
         android:layout_marginTop="8dp"
         android:paddingBottom="14dp"
@@ -107,6 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"

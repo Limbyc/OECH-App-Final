@@ -7,7 +7,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.valance.oechappfinal.databinding.ActivityMainBinding
-import com.valance.oechappfinal.fragments.StartFragment
+import com.valance.oechappfinal.ui.fragments.StartFragment
 import io.github.jan.supabase.SupabaseClient
 
 class MainActivity : AppCompatActivity() {
