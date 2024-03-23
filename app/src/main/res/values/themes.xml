@@ -15,5 +15,7 @@
         <item name="postSplashScreenTheme">@style/Base.Theme.OechAppFinal</item>
     </style>
 
-
+        <style name="Theme.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+            <item name="android:color">@android:color/transparent</item>
+        </style>
 </resources>
