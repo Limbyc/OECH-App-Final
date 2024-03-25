@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.valance.oechappfinal.databinding.ActivityMainBinding
 import com.valance.oechappfinal.ui.fragments.HomeFragment
+import com.valance.oechappfinal.ui.fragments.ProfileFragment
 import com.valance.oechappfinal.ui.fragments.StartFragment
 import io.github.jan.supabase.SupabaseClient
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.profile -> {
-//                    loadFragment(SettingFragment())
+                    loadFragment(ProfileFragment())
                     true
                 }
                 else -> false
