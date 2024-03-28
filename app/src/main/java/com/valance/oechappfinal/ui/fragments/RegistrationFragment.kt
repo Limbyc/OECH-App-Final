@@ -38,6 +38,7 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val originalText = getString(R.string.by_ticking_this_box_you_agree_to_our_terms_and_n_conditions_and_private_policy)
         val startIndex = originalText.indexOf("Terms and")
         val endIndex = originalText.lastIndexOf("policy") + "policy".length

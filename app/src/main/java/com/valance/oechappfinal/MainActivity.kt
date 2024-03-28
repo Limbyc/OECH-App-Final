@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setTheme(R.style.SplashScreen)
         setContentView(R.layout.activity_start)
         binding = ActivityMainBinding.inflate(layoutInflater)

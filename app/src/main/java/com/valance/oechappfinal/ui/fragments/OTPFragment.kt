@@ -45,7 +45,6 @@ class OTPFragment: Fragment() {
                     goToNewPasswordFragment()
                     binding.appCompatTextView9.setBackgroundResource(R.drawable.button_signin1)
                 } else {
-                    binding.appCompatTextView9.setBackgroundResource(R.drawable.button_signin)
                 }
 
             }
